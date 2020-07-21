@@ -9,11 +9,11 @@ package entidade;
  *
  * @author Richard
  */
-public enum TipoProblema {
+public interface TipoProblema {
      
-    ProblemaDeRede,
-    ProblemaBancoDeDados,
-    ProblemaDesempenho;    
+       
+       public String getdescripcionProblema();
+       
   
     
 }

@@ -21,19 +21,38 @@ public class Chamado implements Serializable {
 
     private String data;
     private String hora;
-
-    private String titulo;
-    private String descricao;
-    private int prioridade;
-    private String status;
-    private String tipoProblema;
     private Tecnico tecnico;
     private ClienteEmpresa cliente;
 
     //sistema operacional do cliente e versao
     private String sistemaOperacional;
     private String versaoSO;
-    //problema de banco de dados
+    private TipoChamado tipoChamado;
+	
+    public Chamado(Integer codigo, String data, String hora, Tecnico tecnico, ClienteEmpresa cliente,
+			String sistemaOperacional, String versaoSO, TipoChamado tipoChamado) {
+		super();
+		this.codigo = codigo;
+		this.data = data;
+		this.hora = hora;
+		this.tecnico = tecnico;
+		this.cliente = cliente;
+		this.sistemaOperacional = sistemaOperacional;
+		this.versaoSO = versaoSO;
+		this.tipoChamado = tipoChamado;
+	}
+	
+    
+    
+    
+    /*
+    private String titulo;
+    private String descricao;
+    private int prioridade;
+    private String status;	
+    private String tipoProblema;*/
+
+    /*//problema de banco de dados
     private String bancoDeDados;
     //quando o chamado for fechado, solucao
     private String causaProblema;
@@ -266,6 +285,6 @@ public class Chamado implements Serializable {
     	if(!this.getTitulo().equals(comp.getTitulo())) return false;
     	
     	return true;
-    }
+    }*/
 
 }

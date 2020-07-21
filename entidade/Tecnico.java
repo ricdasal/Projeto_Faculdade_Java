@@ -11,17 +11,43 @@ import java.io.Serializable;
  *
  * @author Richard
  */
-public class Tecnico extends Pessoa implements Serializable {
+public class Tecnico implements Pessoa, Serializable {
 
     private static final long serialVersionUID = 1L;
+    private String nome;
+    private long telefone;
 
-    public Tecnico(String nome, long telefone) {
-        super(nome, telefone);
-    }
 
     @Override
     public String toString() {
         return this.getNome();
     }
+
+
+	@Override
+	public String getNome() {
+		return this.nome;
+	}
+
+
+	@Override
+	public void setNome(String nome) {
+		// TODO Auto-generated method stub
+		this.nome = nome;
+	}
+
+
+	@Override
+	public long getTelefone() {
+		// TODO Auto-generated method stub
+		return this.telefone;
+	}
+
+
+	@Override
+	public void setTelefone(long telefone) {
+		// TODO Auto-generated method stub
+		this.telefone =  telefone;
+	}
 
 }

@@ -11,32 +11,18 @@ import java.io.Serializable;
  *
  * @author Richard
  */
-public class Pessoa implements Serializable{
+public interface Pessoa extends Serializable{
     
-    private static final long serialVersionUID = 1L;
-    private String nome;
-    private long telefone;
+    static final long serialVersionUID = 1L;
+    
 
-    public Pessoa(String nome, long telefone) {
-        this.nome = nome;
-        this.telefone = telefone;
-    }
+    public String getNome();
 
-    public String getNome() {
-        return nome;
-    }
+    public void setNome(String nome); 
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public long getTelefone();
 
-    public long getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(long telefone) {
-        this.telefone = telefone;
-    }
+    public void setTelefone(long telefone);
     
     
     

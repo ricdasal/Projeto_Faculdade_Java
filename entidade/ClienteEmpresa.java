@@ -11,15 +11,18 @@ import java.io.Serializable;
  *
  * @author Richard
  */
-public class ClienteEmpresa extends Pessoa implements Serializable {
+public class ClienteEmpresa implements Pessoa, Serializable {
 
     private static final long serialVersionUID = 1L;
     private Integer codigo;
     private Empresa empresa;
     private long cpf;
+    private String nome;
+    private long telefone;
 
     public ClienteEmpresa(Integer codigo, Empresa empresa, long cpf, String nome, long telefone) {
-        super(nome, telefone);
+        this.nome = nome;
+        this.telefone = telefone;
         this.codigo = codigo;
         this.empresa = empresa;
         this.cpf = cpf;
@@ -51,5 +54,28 @@ public class ClienteEmpresa extends Pessoa implements Serializable {
                 + " - Nome Empresa:" + empresa.getNomeEmpresa() + " - Cliente: "
                 + getCpf() + " - " + getNome();
     }
+
+	@Override
+	public String getNome() {
+		return this.nome;
+	}
+
+	@Override
+	public void setNome(String nome) {
+		this.nome = nome;
+		
+	}
+
+	@Override
+	public long getTelefone() {
+		
+		return this.telefone;
+	}
+
+	@Override
+	public void setTelefone(long telefone) {
+		this.telefone = telefone;
+		
+	}
 
 }
